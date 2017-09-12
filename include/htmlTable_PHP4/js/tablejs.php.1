@@ -1,0 +1,81 @@
+function noneChecked() {
+	for( i = 0; i < document.tableForm.elements.length; i++ ) {
+		tableFormItem = document.tableForm.elements[i];
+		if( tableFormItem.type == 'checkbox' ) {
+			if( tableFormItem.checked ) {
+				return false;
+			}
+		}
+	}
+	return true;
+}
+
+function doAction( command ) {
+	if( command == "DELETE_USER" ) {
+		selectMsg = "Please select one or more Users to delete.";
+		confirmMsg = "Are you sure you want to delete the selected User(s)?";
+	}
+	else if( command == "DELETE_GROUP" ) {
+		selectMsg = "Please select one or more Groups to delete.";
+		confirmMsg = "Are you sure you want to delete the selected Group(s)?";	
+	}
+	else if( command == "SET_USER_ACTIVE" ) {
+		selectMsg = "Please select one or more Users to set as Active.";
+		confirmMsg = "Are you sure you want to set the User(s) as Active?";	
+	}
+	else if( command == "SET_USER_INACTIVE" ) {
+		selectMsg = "Please select one or more Users to set as Inactive.";
+		confirmMsg = "Are you sure you want to set the User(s) as Inactive?";	
+	}
+	if( noneChecked() == true ) {
+		alert(selectMsg);
+		return false;
+	}
+	if( confirm(confirmMsg) ) {
+		loc = "<?=$_SERVER[PHP_SELF]?>?action=" + command + "&id=" + getIDParam();
+		location.href = loc;
+	}
+}
+
+function getIDParam() {
+	idString = "";
+	firstTime = true;
+
+	for( i = 0; i < document.tableForm.elements.length; i++ ) {
+		tableFormItem = document.tableForm.elements[i];
+		if( tableFormItem.name == 'checkAllBox' )
+			continue;
+		if( tableFormItem.type == 'checkbox' ) {
+			if( !tableFormItem.checked )
+				continue;
+			if( !firstTime )
+				idString += ":";
+			idString += tableFormItem.value;
+			firstTime = false;
+		}
+	}
+	return idString;
+}
+
+function doCBClick( CB ) {
+	if( CB.name == 'checkAllBox' ) {
+		for( i = 0; i < document.tableForm.elements.length; i++ ) {
+			tableFormItem = document.tableForm.elements[i];
+			if( tableFormItem.type == 'checkbox' ) {
+				tableFormItem.checked = tableForm.checkAllBox.checked;
+			}
+		}
+	}
+	else {
+
+		for( i = 0; i < document.tableForm.elements.length; i++ ) {
+			tableFormItem = document.tableForm.elements[i];
+			if( tableFormItem.type == 'checkbox' ) {
+				if( !tableFormItem.checked ) {
+					tableForm.checkAllBox.checked = tableFormItem.checked;
+					return;
+				}
+			}
+		}
+	}
+}

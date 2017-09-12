@@ -1,0 +1,133 @@
+body { font-size: 12px; font-family: tahoma; background-image: url('../images/fyj_blue_gradient.jpg') }
+
+#logo_main
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px 0px 0px
+}
+
+#middle_column
+{
+    position: absolute;
+    top: 25px;
+    left:275px;
+    width:400px
+}
+
+#right_column
+{
+    position: absolute;
+    top: 20px;
+    left: 695px;
+    width: 300px;
+}
+
+#left_column
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 350px;
+}
+
+#left_nav
+{
+    position: absolute;
+    top: 280px;
+    left: 150px;
+    width: 400px;
+}
+
+#login_box
+{
+    border: 0px solid #ffffff;
+    position: relative;
+    color: black;
+    width: 300px;
+    height: 60px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 10px 0px;
+    background-image: url('../images/login_box_gradient.jpg')
+}
+
+#login_content
+{
+    border: 0px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: black;
+    width: 300px;
+    height: 30px;
+    padding: 0px 0px 0px 0px
+}
+
+
+#map
+{
+    margin: 0px 0px 0px 0px;
+    border: 1px solid #82A0BC;
+    position:relative;
+    width: 400px;
+    height: 400px;
+    margin: 0px 0px 10px 0px;
+}
+
+#tag_clouds
+{
+    position:relative;
+    width: 300px;
+}
+
+#map_zip_code
+{
+    position:relative;
+    width: 300px;
+    text-align: right;
+    display:inline
+}
+
+.found_tag_cloud_class_1 { color: #FD8F19; font-size: 11px }
+.found_tag_cloud_class_2 { color: #FD8F19; font-size: 14px }
+.found_tag_cloud_class_3 { color: #FD8F19; font-size: 18px }
+.found_tag_cloud_class_4 { color: #FD8F19; font-size: 24px }
+.found_tag_cloud_class_5 { color: #FD8F19; font-size: 28px }
+.found_tag_cloud_class_6 { color: #FD8F19; font-size: 32px }
+.found_tag_cloud_class_7 { color: #FD8F19; font-size: 34px }
+
+.lost_tag_cloud_class_1 { color: #86A1BC; font-size: 11px }
+.lost_tag_cloud_class_2 { color: #86A1BC; font-size: 14px }
+.lost_tag_cloud_class_3 { color: #86A1BC; font-size: 18px }
+.lost_tag_cloud_class_4 { color: #86A1BC; font-size: 24px }
+.lost_tag_cloud_class_5 { color: #86A1BC; font-size: 28px }
+.lost_tag_cloud_class_6 { color: #86A1BC; font-size: 32px }
+.lost_tag_cloud_class_7 { color: #86A1BC; font-size: 34px }
+
+.form_item {margin-bottom: 10px;}
+.public_form_label { text-align: right; font-size: 14px; margin-top: 15px }
+.public_form_text_input { width: 375px }
+.public_form_text_area { width: 375px }
+.public_form_text_area2 { width: 375px; height: 400px }
+.public_form_zip_code { width: 75px; display:inline; margin-left:10px; margin-right:5px }
+.public_form_zip_code2 { width: 75px; display:inline; }
+.public_form_password { width: 200px }
+.big_page_hdr { font-weight: bold; color: white; font-size: 22px; margin-bottom: 15px }
+.medium_hdr { font-weight: bold; color: white; font-size: 18px; margin-bottom: 15px }
+.public_form_marked_label { color: red; }
+.map_zip_code_label {font-size:10px}
+.hdr1 {font-size: 16px; color: black; font-weight:bold; display:inline}
+.item_card {padding: 5px; margin-bottom: 15px; width:400px; border: 1px solid #82A0BC; display: none; background-color: white}
+.item_card_image {  }
+li {margin-bottom:25px}
+td {vertical-align: top}
+
+.scam_logo {margin-top: -40px; margin-left: 300px; }
+.scam_instr { margin-top: -10px; margin-left: 300px; font-size:14px; color: red; font-weight:bold; }
+.footer { font-size: 10px; display:block;}
+.nav { font-size: 13px; text-decoration:none; display:inline; }
+.user_home_nav {  margin-top: 1px; float:right; font-size: 13px;text-decoration:none; }
+.no_results { font-size: 16px; color: #663333; font-weight: bold; }
+.login_error { position: absolute; margin-left: 685px; margin-top: 75px; color: red; }
+.zip_error { position: absolute; margin-left: 685px; margin-top: 100px; color: red; }
